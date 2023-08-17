@@ -22,18 +22,19 @@
               <q-card-section class="text-h5 text-bold">
                 {{ text.titulo }}
               </q-card-section>
-              <q-card-section horizontal class="row">
+              <q-card-section horizontal class="row" style="height: 73%">
                 <q-card-section class="col">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ante in vestibulum volutpat. In convallis dui est, quis tincidunt felis ultrices ac. Nunc luctus, odio et luctus facilisis, nisi dui fermentum libero, et placerat justo lacus sed nisl. Curabitur eu sem ut leo dictum consectetur pharetra imperdiet neque.
+                  <q-card-section style="padding-left: 0;">
+                    <q-btn label="Ver más"></q-btn>
+                  </q-card-section>
                 </q-card-section>
                   <q-img
                     class="col"
-                    :ratio=1
+                    ratio="1"
+                    style="object-fit: cover;"
                     src="https://cdn.quasar.dev/img/parallax2.jpg"
                   />
-              </q-card-section>
-              <q-card-section>
-                <q-btn label="Ver más"></q-btn>
               </q-card-section>
             </q-card>
           </div>

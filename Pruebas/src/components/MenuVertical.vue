@@ -25,8 +25,8 @@
               <q-card-section horizontal class="row" style="height: calc(100% - 135px)">
                 <q-card-section class="col">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ante in vestibulum volutpat. In convallis dui est, quis tincidunt felis ultrices ac. Nunc luctus, odio et luctus facilisis, nisi dui fermentum libero, et placerat justo lacus sed nisl. Curabitur eu sem ut leo dictum consectetur pharetra imperdiet neque.
-                  <q-card-section style="padding-left: 0;">
-                    <q-btn v-bind:label="text.btn.texto" v-bind:color="text.btn.color" no-caps></q-btn>
+                  <q-card-section class="flex justify-end" style="padding-left: 0;">
+                    <q-btn class="" v-bind:label="text.btn.texto" v-bind:color="text.btn.color" no-caps></q-btn>
                   </q-card-section>
                 </q-card-section>
                   <q-img

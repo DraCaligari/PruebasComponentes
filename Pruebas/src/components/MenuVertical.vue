@@ -59,6 +59,7 @@
           style="width: 100%"
           dense-toggle
           expand-icon-class="text-white"
+          class="item_section"
         >
         <q-card class="full-height">
             <q-card-section class="text-h5">
@@ -70,7 +71,7 @@
                   src="https://cdn.quasar.dev/img/parallax2.jpg"
                 />
               <q-card-section class="q-px-none ">
-                <p>{{ item.content }}</p>
+                <p class="item-text-section">{{ item.content }}</p>
               </q-card-section>
             </q-card-section>
             <q-card-section >
@@ -143,8 +144,12 @@ const toggleCard = (index) => {
   display: flex;
 }
 
-.q-item__label{
+.item_section{
   font-size: 20px !important;
+}
+
+.item-text-section{
+  font-size: 14px !important;
 }
 .horizontal-card {
   flex: 1;

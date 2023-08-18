@@ -1,6 +1,6 @@
 <template>
-  <div class="q-py-md q-pl-md q-ma-lg">
-    <div class="q-gutter-y-md q-flex" style="height: 100%; min-height: 500px;">
+  <div class="q-pa-md q-ma-lg">
+    <div class="q-gutter-y-md q-flex full-width" style="height: 100%; min-height: 500px; max-height: 600px;">
       <div v-for="(text, index) in texts" :key="index" class="q-flex">
         <div class="content1" style="width: 62px!important; height: 100%;">
           <q-card
@@ -16,17 +16,17 @@
               </q-card-section>
             </q-card>
         </div>
-          <div style="height: 100%; min-width: 300px; max-width: 800px;"
+          <div style="height: 100%; min-width: 300px;"
               :class="{'hidden': activeCardIndex !== index }">
             <q-card class="full-height q-pl-md">
               <q-card-section class="text-h5 text-bold">
                 {{ text.titulo }}
               </q-card-section>
-              <q-card-section horizontal class="row" style="height: 73%">
+              <q-card-section horizontal class="row" style="height: calc(100% - 135px)">
                 <q-card-section class="col">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis ante in vestibulum volutpat. In convallis dui est, quis tincidunt felis ultrices ac. Nunc luctus, odio et luctus facilisis, nisi dui fermentum libero, et placerat justo lacus sed nisl. Curabitur eu sem ut leo dictum consectetur pharetra imperdiet neque.
                   <q-card-section style="padding-left: 0;">
-                    <q-btn label="Ver más"></q-btn>
+                    <q-btn v-bind:label="text.btn.texto" v-bind:color="text.btn.color" no-caps></q-btn>
                   </q-card-section>
                 </q-card-section>
                   <q-img
@@ -49,7 +49,7 @@
 import { ref } from 'vue';
 
 let isExpanded = ref(false)
-const texts = ref([{titulo:"Texto 1", color:'orange', icono:'mdi-cow'},{titulo:"Texto 2", color:'orange-8',icono:'mdi-cow'}, {titulo:"Texto 3", color:'orange-4', icono:'mdi-cow'}]);
+const texts = ref([{titulo:"Texto 1", color:'orange', icono:'mdi-cow', btn: {color: 'red', texto:'Ver más'}},{titulo:"Texto 2", color:'orange-8',icono:'mdi-cow', btn: {color: 'blue', texto:'Ver menos'}}, {titulo:"Texto 3", color:'orange-4', icono:'mdi-cow', btn: {color: 'green', texto:'Ver'}}]);
 const activeCardIndex = ref(0);
 
 const toggleCard = (index) => {

@@ -87,6 +87,8 @@
 <script setup>
 import { ref } from 'vue';
 
+const  selected_model = ref({})
+
 let isExpanded = ref(false)
 const texts = [
                 {
@@ -130,23 +132,11 @@ const activeCardIndex = ref(0);
 const toggleCard = (index) => {
   if (activeCardIndex.value === index) {
     isExpanded.value = !isExpanded.value;
-    //activeCardIndex.value = -1;
-    isActive.value = !isActive.value
-    console.log(activeCardIndex.value, 'cerrada')
   } else {
   isExpanded.value = !isExpanded.value;
   activeCardIndex.value = index;
-    activeCardIndex.value = index;
-    isActive.value = false
-    console.log(activeCardIndex.value, 'abierta')
   }
 };
-
-const toggleCardResponsice = (index)  =>{
-  console.log("Hola mundo!!", index)
-}
-const  selected_model = ref({})
-const  selected_model_fullview = ref({})
 
 //toggleCard(null);
 
